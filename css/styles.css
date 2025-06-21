@@ -1,0 +1,98 @@
+/* Основные настройки */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  /* Навбар */
+  .navbar {
+    background-color: #003366;
+  }
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #aad4ff;
+  }
+  
+  /* Hero */
+  .hero {
+    background: linear-gradient(to right, rgba(0, 51, 102, 0.85), rgba(0, 85, 170, 0.85)),
+                url('../img/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-out;
+  }
+  .hero p.lead {
+    font-size: 1.5rem;
+    animation: fadeInUp 1.2s ease-out;
+  }
+  .hero .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    animation: fadeIn 1.4s ease-out;
+  }
+  
+  /* Анимации */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /* What We Offer */
+  .card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  .card .display-4 {
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover .display-4 {
+    transform: scale(1.2);
+  }
+  .section-title {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
