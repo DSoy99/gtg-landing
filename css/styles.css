@@ -4,10 +4,27 @@ body {
     background-color: #f8f9fa;
     color: #212529;
   }
+  /* CTA btn */
+  .btn-warning {
+    color: #1F2937;
+    background-color: #FFC107;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+  }
   
   /* Навбар */
   .navbar {
-    background-color: #003366;
+    background-color: rgba(31, 41, 55, 0.9); /* Тёмно-серый с прозрачностью */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* чтобы была поверх остальных элементов */
+    backdrop-filter: blur(6px); /* мягкое размытие фона (по желанию) */
   }
   .navbar-brand {
     color: #fff;
@@ -25,8 +42,8 @@ body {
   
   /* Hero */
   .hero {
-    background: linear-gradient(to right, rgba(0, 51, 102, 0.85), rgba(0, 85, 170, 0.85)),
-                url('../img/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(to right, rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.5)),
+                url('../img/IMG_20250621_231927.jpg') no-repeat center center/cover;
     height: 100vh;
   }
   .hero h1 {
@@ -39,9 +56,12 @@ body {
     animation: fadeInUp 1.2s ease-out;
   }
   .hero .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1.1rem;
-    animation: fadeIn 1.4s ease-out;
+    background-color: #FFC107;
+    color: #1F2937;
+    border: none;
+  }
+  .hero .btn:hover {
+    background-color: #e0a800;
   }
   
   /* Анимации */
@@ -58,34 +78,142 @@ body {
     to   { opacity: 1; }
   }
   
-  /* What We Offer */
+  /* mobile */
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+    .final-cta-section h2 {
+      font-size: 1.5rem;
+    }
+    .final-cta-section p {
+      font-size: 1rem;
+    }
+  }
+
+/* Advantages */
+section.bg-light {
+    background-color: #F3F4F6 !important;
+  }
+  
+  .card {
+    border: none;
+    background: linear-gradient(135deg, #ffffff, #f9fafb);
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+  }
   .card:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f3f4f6);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
   }
-  .card .display-4 {
-    transition: transform 0.3s ease-in-out;
+  .card .icon-box {
+    background-color: #1F2937;
+    color: #FFC107;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .card:hover .display-4 {
-    transform: scale(1.2);
+  .card-title {
+    font-weight: 600;
+    color: #1F2937;
+    margin-top: 1rem;
+  }
+  .card-text {
+    color: #4B5563;
+    font-size: 0.95rem;
+  }
+
+    /* subscription */
+  .subscription-item {
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E5E7EB;
   }
   .section-title {
+    font-weight: 700;
+    color: #111827;
     position: relative;
     display: inline-block;
-    font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
   }
   .section-title::after {
     content: '';
     position: absolute;
-    left: 50%;
     bottom: -10px;
+    left: 50%;
     transform: translateX(-50%);
     width: 60px;
-    height: 3px;
-    background-color: #007bff;
+    height: 4px;
+    background-color: #FFC107;
     border-radius: 2px;
+  }
+  
+  .subscription-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Contact form */
+  .contact-form-section {
+    background: linear-gradient(135deg, rgba(54, 70, 92, 0.9), #121820);
+    color: #ffffff;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .contact-form-section ul li {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #f1f5f9;
+  }
+  
+  .contact-form-section .form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    box-shadow: none;
+  }
+
+  .contact-form-section .form-control::placeholder {
+    color: #adb5bd;
+  }
+  
+  .contact-form-section textarea.form-control {
+    resize: vertical;
+  }
+  
+  .contact-form-section .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.4);
+    border-color: #FFC107;
+  }
+  
+  .contact-form-section .btn-warning {
+    color: #1F2937;
+    background-color: #FFC107;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-form-section .btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+  }
+  
+  .contact-form-section h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-form-section p {
+    font-size: 1.2rem;
+    color: #EDEDED;
   }
   
   /* Footer */
