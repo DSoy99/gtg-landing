@@ -9,6 +9,10 @@ html, body {
     overflow-x: hidden;
   }
 
+html {
+  scroll-padding-top: 100px; /* высота фиксированного header */
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f8f9fa;
@@ -266,3 +270,8 @@ section.bg-light {
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   }
+
+.navbar-offset {
+  height: 80px; /* равна высоте твоей фиксированной шапки */
+}
+
