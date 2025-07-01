@@ -275,3 +275,28 @@ section.bg-light {
   height: 80px; /* равна высоте твоей фиксированной шапки */
 }
 
+
+#about ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #1F2937;
+}
+
+#about p {
+  font-size: 1.05rem;
+  color: #4B5563;
+  line-height: 1.7;
+}
+
+#about .bg-white {
+  background-color: #ffffff;
+  border-left: 4px solid #FFC107;
+}
+
+@media (max-width: 576px) {
+  #about p {
+    font-size: 1rem;
+  }
+}
+
+
